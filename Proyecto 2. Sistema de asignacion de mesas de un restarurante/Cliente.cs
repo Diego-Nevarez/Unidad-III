@@ -19,5 +19,5 @@ namespace Proyecto2_Restaurante
             return $"{Nombre}-{Persona}personas"; 
         }
     }
-    xds
+    
 }
