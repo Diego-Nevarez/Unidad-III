@@ -16,7 +16,8 @@ namespace Proyecto2_Restaurante
         }
         public override string ToString()
         {
-            return $"{Nombre}-{Persona}personas";
+            return $"{Nombre}-{Persona}personas"; 
         }
     }
+    xds
 }
