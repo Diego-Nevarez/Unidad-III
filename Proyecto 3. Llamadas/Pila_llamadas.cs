@@ -4,25 +4,25 @@ namespace Proyecto3_PilaLlamadas
 {
     public class PilaLlamadas
     {
-        private Nodo? cima; 
+        private Nodo? cima; // Puntero que apunta al elemento superior de la pila
 
         public PilaLlamadas()
         {
-            cima = null; 
+            cima = null; // Inicializa la pila vacía
         }
 
         public bool EstaVacia()
         {
-            return cima == null;
+            return cima == null; // Retorna true si la cima es nula (pila vacía)
         }
 
         public void RegistrarLlamada(string nombreFuncion)
         {
-            Llamada nuevaLlamada = new Llamada(nombreFuncion);
-            Nodo nuevoNodo = new Nodo(nuevaLlamada);
+            Llamada nuevaLlamada = new Llamada(nombreFuncion); // Crea el objeto llamada
+            Nodo nuevoNodo = new Nodo(nuevaLlamada);          // Envuelve la llamada en un nodo
 
-            nuevoNodo.Siguiente = cima;
-            cima = nuevoNodo;
+            nuevoNodo.Siguiente = cima; // El nuevo nodo apunta a la cima anterior
+            cima = nuevoNodo;           // El nuevo nodo se convierte en la nueva cima
 
             Console.WriteLine($"\n[+] Llamada registrada: Entrando a {nombreFuncion}()");
         }
@@ -36,7 +36,7 @@ namespace Proyecto3_PilaLlamadas
             }
 
             Console.WriteLine($"\nRegresando de: {cima!.Dato.NombreFuncion}()");
-            cima = cima.Siguiente;
+            cima = cima.Siguiente; // Elimina el elemento de la cima moviendo el puntero al siguiente
         }
 
         public void AtenderLlamada()
@@ -48,7 +48,7 @@ namespace Proyecto3_PilaLlamadas
             }
 
             Console.Write("\nAtendiendo contexto actual de ejecución en la función: ");
-            cima!.Dato.Mostrar();
+            cima!.Dato.Mostrar(); // Muestra la función que está en la cima
             Console.WriteLine();
         }
 
@@ -61,12 +61,12 @@ namespace Proyecto3_PilaLlamadas
             }
 
             Console.WriteLine("\n--- Pila de llamadas (Call Stack) ---");
-            Nodo? actual = cima;
+            Nodo? actual = cima; // Nodo auxiliar para recorrer desde la cima hacia abajo
             int i = 1;
             while (actual != null)
             {
                 Console.Write($"{i}. ");
-                actual.Dato.Mostrar();
+                actual.Dato.Mostrar(); // Imprime cada llamada activa
                 Console.WriteLine();
                 actual = actual.Siguiente;
                 i++;
@@ -82,7 +82,7 @@ namespace Proyecto3_PilaLlamadas
             }
 
             Console.Write("\nÚltima llamada activa (Cima): ");
-            cima!.Dato.Mostrar();
+            cima!.Dato.Mostrar(); // Muestra los datos de la cima sin eliminarla
             Console.WriteLine();
         }
 
@@ -100,6 +100,7 @@ namespace Proyecto3_PilaLlamadas
 
             while (actual != null)
             {
+                // Compara ignorando mayúsculas/minúsculas
                 if (actual.Dato.NombreFuncion.Equals(nombreBuscado, StringComparison.OrdinalIgnoreCase))
                 {
                     Console.WriteLine($"\n¡Función '{nombreBuscado}' encontrada en la pila (Posición {posicion} desde la cima)!");
@@ -124,6 +125,7 @@ namespace Proyecto3_PilaLlamadas
                 return;
             }
 
+            // Si la función a eliminar está justo en la cima
             if (cima!.Dato.NombreFuncion.Equals(nombreEliminar, StringComparison.OrdinalIgnoreCase))
             {
                 Console.WriteLine($"\nEliminando y finalizando llamada de la cima: {cima.Dato.NombreFuncion}()");
@@ -131,13 +133,14 @@ namespace Proyecto3_PilaLlamadas
                 return;
             }
 
+            // Busca en el resto de la pila para desconectar el nodo deseado
             Nodo? actual = cima;
             while (actual.Siguiente != null)
             {
                 if (actual.Siguiente.Dato.NombreFuncion.Equals(nombreEliminar, StringComparison.OrdinalIgnoreCase))
                 {
                     Console.WriteLine($"\nEliminando función '{nombreEliminar}' de la pila de llamadas.");
-                    actual.Siguiente = actual.Siguiente.Siguiente;
+                    actual.Siguiente = actual.Siguiente.Siguiente; // Salta el nodo para eliminarlo
                     return;
                 }
                 actual = actual.Siguiente;
