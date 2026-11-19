@@ -11,4 +11,6 @@ Materia: Estructuras de Datos
 * Proyecto 3. Llamadas
 * Proyecto 4. Calculadora de expresiones matematicas
 * Proyecto 5. Historial de navegacion
+* Proyecto 6 .Lista simplemente enlazada y lista doblemente enlazada
+* Proyecto 7. Sistemas de reproduccion de musicas
   
