@@ -24,9 +24,11 @@ crear un reproductor de musica simulado
 * Reproduccion circular
 
 **lista doble**
+
 Cancion A = Cancion B = Cancion C = Cancion D
 
 **lista circular**
+
 A -> B -> C -> D
 
 cuando llegue la ultima cancion, automaticamente Debera regresar a la primera  
