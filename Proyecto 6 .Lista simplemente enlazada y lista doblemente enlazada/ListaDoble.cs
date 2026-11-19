@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace Proyecto6_Tareas
-
 {
     public class ListaDoble
     {
@@ -20,7 +19,9 @@ namespace Proyecto6_Tareas
                 Datos = tarea;
             }
         }
-        public void insertar(Tarea tarea) {
+
+        public void insertar(Tarea tarea)
+        {
             Nodo nuevo = new Nodo(tarea);
 
             if (inicio == null)
@@ -28,27 +29,30 @@ namespace Proyecto6_Tareas
                 inicio = nuevo;
                 return;
             }
+
             Nodo actual = inicio;
 
-            while (actual.Siguiente != null) {
+            while (actual.Siguiente != null)
+            {
                 actual = actual.Siguiente;
-
-                actual.Siguiente = nuevo;
-                nuevo.Anterior = actual;
             }
 
+            actual.Siguiente = nuevo;
+            nuevo.Anterior = actual;
+        }
 
-            public Tarea Buscar(int id)
+        public Tarea Buscar(int id)
         {
             Nodo actual = inicio;
 
-            while (actual != null) {
-
+            while (actual != null)
+            {
                 actual = actual.Siguiente;
             }
-            return null;
 
+            return null;
         }
+
         public void Mostrar()
         {
             Nodo actual = inicio;
