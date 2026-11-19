@@ -6,14 +6,13 @@ namespace Proyecto2_Restaurante
 {
     public class Nodo
     {
-        public Cliente Datos;
-        public Nodo Siguiente;
+        public Cliente Datos;      // Almacena la información del cliente
+        public Nodo Siguiente;     // Puntero que apunta al siguiente nodo en la cola
 
         public Nodo(Cliente cliente)
         {
-            Datos = cliente;
-            Siguiente = null;
+            Datos = cliente;       // Asigna los datos del cliente al nodo
+            Siguiente = null;      // Inicializa el puntero siguiente como nulo al crearlo
         }
-
     }
 }
