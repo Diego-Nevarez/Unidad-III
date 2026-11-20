@@ -45,11 +45,25 @@ namespace Proyecto_7_Musica
         {
             if (actual != null)
             {
-                actua
+                actual = actual.Siguiente;
+                Console.WriteLine($"Reproduciendo:{actual.Datos}");
             }
 
         } 
       
+        public void Mostrar()
+        {
+            if (actual == null)
+                return;
+
+            Nodo auxialiar = actual;
+            do
+            {
+                Console.Write(auxialiar.Datos);
+                auxiliar = auxialiar.Siguiente;
+            }while (auxialiar != actual);
+
+        }
 
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Proyecto_7_musica
+namespace Proyecto_7_Musica
 {
     public class Cancion
     {
