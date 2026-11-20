@@ -1,0 +1,55 @@
+﻿using Proyecto_7_musica;
+using System;
+using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+
+namespace Proyecto_7_Musica
+{
+    public class Listacircular
+    {
+        private Nodo actual;
+
+        private class Nodo
+        {
+            public Cancion Datos;
+            public Nodo Siguiente;
+
+            public Nodo(Cancion cancion)
+            {
+                Datos = cancion;
+            }
+        }
+
+        public void Agregar(Cancion cancion)
+        {
+            Nodo nuevo = new Nodo(cancion);
+
+            if (actual == null)
+            {
+                actual = nuevo;
+                nuevo.Siguiente = nuevo;
+                return;
+            }
+            Nodo auxiliar = actual;
+
+            while (auxiliar.Siguiente != actual)
+
+                auxiliar = auxiliar.Siguiente;
+
+            auxiliar.Siguiente = nuevo;
+            nuevo.Siguiente = actual;
+        }
+            
+            public void Siguiente()
+        {
+            if (actual != null)
+            {
+                actua
+            }
+
+        } 
+      
+
+    }
+}
