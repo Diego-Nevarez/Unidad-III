@@ -1,5 +1,5 @@
 # Estructuras de Datos
-## Proyecto 9. Sistema de Control de Procesos de un Sistema Operativo
+## royecto 10. Sistema de Gestión de Pedidos de una Tienda en Línea
 ### Datos del alumno
 Nombre: Diego Alexander Nevarez Rodriguez
 
