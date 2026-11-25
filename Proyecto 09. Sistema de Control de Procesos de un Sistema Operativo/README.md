@@ -11,7 +11,7 @@ Materia: Estructuras de Datos
 ### Descripcion
  Este proyecto permite relacionar Estructuras de Datos con Sistemas Operativos, algo que el propio programa de la asignatura recomienda al señalar que los sistemas operativos requieren estructuras de datos para manejar diferentes procesos.
 
- Cada proceso tendrá:
+**Cada proceso tendrá:**
 * PID
 * Nombre
 * Prioridad
