@@ -1,5 +1,5 @@
 # Estructuras de Datos
-## Proyecto 6 .Lista simplemente enlazada y lista doblemente enlazada
+## Proyecto 9. Sistema de Control de Procesos de un Sistema Operativo
 ### Datos del alumno
 Nombre: Diego Alexander Nevarez Rodriguez
 
@@ -9,32 +9,40 @@ Carrera: Ingeniería en Sistemas Computacionales
 
 Materia: Estructuras de Datos
 ### Descripcion
-Lista simplemente enlazada y lista doblemente enlazada
-cada tarea tendrá:
-ID
-Descripción
-Prioridad 
-Fecha 
-Estado
-Responsable
+ Este proyecto permite relacionar Estructuras de Datos con Sistemas Operativos, algo que el propio programa de la asignatura recomienda al señalar que los sistemas operativos requieren estructuras de datos para manejar diferentes procesos.
 
-**Funciones:**
-* Agregar tarea 
-* Eliminar tarea
-* Buscar tarea
-* Modificar tarea
-* Marcar como terminada 
-* Mostrar tareas pendientes
-* Mostrar tareas terminadas 
-* Ordenar tareas
-* Recorrer lista hacia adelante
-* Recorrer lista hacia atras
+ Cada proceso tendrá:
+* PID
+* Nombre
+* Prioridad
+* Estado
+* Tiempo de ejecución
 
-Aplicacion de lista doble
-NULL <- T1 = T2 = T3 = T4 ->
+ **Estados**
+* NUEVO
+* LISTO
+* EJECUTANDO
+* BLOQUEADO
+* TERMINADO
 
-El estudainte Debera implementar los nodos y sus referencias
 
+**Funciones**
+* Crear proceso.
+* Eliminar proceso.
+* Ejecutar proceso.
+* Bloquear proceso.
+* Desbloquear proceso.
+* Mostrar procesos.
+* Buscar proceso.
+* Administrar cola de procesos.
+
+**Ejemplo**
+COLA DE PROCESOS
+
+ P01 -> P02 -> P03 -> P04
+
+ El proyecto puede posteriormente ampliarse con algoritmos de planificación.
+ 
 ### Lenguaje
 C#
 ### IDE
